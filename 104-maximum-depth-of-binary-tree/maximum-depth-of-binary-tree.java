@@ -18,9 +18,6 @@ class Solution {
         if(root == null){
             return 0;
         }
-        if(root.left == root.right){
-            return 1;
-        }
 
         int left = 1 + maxDepth(root.left);
         int right = 1 + maxDepth(root.right);
