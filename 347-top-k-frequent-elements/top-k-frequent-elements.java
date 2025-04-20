@@ -25,9 +25,6 @@ class Solution {
             if(bucket[i] != null){
                 for(int val: bucket[i]){
                     res[counter++] = val;
-                    if(counter == k){
-                        return res;
-                    }
                 }
                 
             }
