@@ -32,14 +32,16 @@ class Solution {
         if(root == null){
             return false;
         }
-        boolean res = false;
+        
         if(root.val == subRoot.val){
-            res = isSameTree(root, subRoot);
+            if(isSameTree(root, subRoot)){
+                return true;
+            }
         }
         boolean left = isSubtree(root.left, subRoot);
         boolean right = isSubtree(root.right, subRoot);
 
-        return res == true ? res : (left || right);
+        return (left || right);
     }
     
 }
