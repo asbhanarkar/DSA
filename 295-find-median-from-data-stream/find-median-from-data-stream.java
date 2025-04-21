@@ -4,9 +4,9 @@ class MedianFinder {
         
     }
 
-    private PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
+    PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
 
-    private PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+    PriorityQueue<Integer> minHeap = new PriorityQueue<>();
     
     public void addNum(int num) {
         if(maxHeap.isEmpty() || num <= maxHeap.peek()){
