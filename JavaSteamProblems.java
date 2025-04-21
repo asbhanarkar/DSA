@@ -31,6 +31,17 @@ public class JavaSteamProblems  {
         System.out.println("convert String to upper Case : " + upperCaseList);
 
 
+        
+        // comma separated string to list
+
+        String s = "All,is,well";
+
+        List<String> strList = Arrays.stream(s.split(","))
+                                    .toList();
+        
+        System.out.println("comma separated string to list: " + strList);
+
+
         //Find max num in List
         List<Integer> list1 = Arrays.asList(1,2,3,4,3,6,8);   
         
