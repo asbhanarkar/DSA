@@ -4,22 +4,22 @@ class Solution {
         StringBuilder str = new StringBuilder();
 
         List<String> arr = new ArrayList<>();
-        String word ="";
+        StringBuilder word = new StringBuilder();
         for(int i = 0; i < s.length(); i++){
             char c = s.charAt(i);
             if(c == ' '){
-                if(word != ""){
-                    arr.add(word);
-                    word = "";
+                if(word.length() != 0){
+                    arr.add(word.toString());
+                    word  = new StringBuilder();
                 }
                 
             }else{
-                word = word + c;
+                word.append(c);
             }  
         }
 
-        if(word != ""){
-            arr.add(word);
+        if(word.length() != 0){
+            arr.add(word.toString());
         }
 
         for(int i = arr.size() -1; i >= 0; i--){
